@@ -1,6 +1,6 @@
 .body-index {
   display: grid;
-  grid-template-rows: 900px 600px 1100px 900px;
+  grid-template-rows: 900px 600px 1400px 900px;
   grid-template-areas: "main" "men-or-women" "info" "form";
 }
 .body-index main {
@@ -22,17 +22,72 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "men women";
 }
-.body-index .section-men-or-women .men {
+.body-index .section-men-or-women .section-men-container {
   grid-area: men;
   background-color: cornflowerblue;
 }
-.body-index .section-men-or-women .women {
+.body-index .section-men-or-women .section-women-container {
   grid-area: women;
   background-color: rosybrown;
+}
+.body-index .section-men-or-women .section-men-container, .body-index .section-men-or-women .section-women-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 .body-index .section-information {
   grid-area: info;
   background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-index .section-information article {
+  background-color: rgb(167, 167, 8);
+  margin: 70px;
+  height: calc(100% - 140px);
+  width: 100%;
+  display: grid;
+  grid-template-rows: 40% 60%;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-areas: "text img1 img2" "img3 discount discount";
+}
+.body-index .section-information article .text {
+  grid-area: text;
+  background-color: aquamarine;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.body-index .section-information article .text div {
+  margin: 25%;
+}
+.body-index .section-information article .img1 {
+  grid-area: img1;
+  background-color: black;
+}
+.body-index .section-information article .img2 {
+  grid-area: img2;
+  background-color: purple;
+}
+.body-index .section-information article .img3 {
+  grid-area: img3;
+  background-color: peru;
+}
+.body-index .section-information article .discount {
+  grid-area: discount;
+  background-color: rgb(167, 167, 8);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.body-index .section-information article .discount div {
+  margin: 30%;
+}
+.body-index .section-information article .discount div p {
+  font-size: 4rem;
 }
 .body-index .section-form {
   grid-area: form;
