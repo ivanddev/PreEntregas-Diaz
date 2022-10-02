@@ -1,0 +1,22 @@
+//header
+header{
+    grid-area: header;
+    background-color: aquamarine;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0;
+        a{
+            margin: 0 0.5rem;
+        }
+        .ul-left{
+            display: flex;
+        }
+        .ul-right{
+         display: flex;   
+        }
+    }
+}
+
+

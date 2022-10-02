@@ -1,7 +1,37 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(2, 54, 37, 0.452);
+}
+
+header {
+  grid-area: header;
+  background-color: aquamarine;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+header nav a {
+  margin: 0 0.5rem;
+}
+header nav .ul-left {
+  display: flex;
+}
+header nav .ul-right {
+  display: flex;
+}
+
 .body-index {
   display: grid;
-  grid-template-rows: 900px 600px 1400px 900px;
-  grid-template-areas: "main" "men-or-women" "info" "form";
+  grid-template-rows: auto 900px 600px 1400px 900px;
+  grid-template-areas: "header" "main" "men-or-women" "info" "form";
 }
 .body-index main {
   grid-area: main;
@@ -92,6 +122,53 @@
 .body-index .section-form {
   grid-area: form;
   background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-index .section-form .section-form-container {
+  height: 650px;
+  width: 750px;
+  padding: 50px;
+  background-color: aquamarine;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "p" "form";
+}
+.body-index .section-form .section-form-container p {
+  grid-area: p;
+  text-align: center;
+  letter-spacing: 5px;
+}
+.body-index .section-form .section-form-container form {
+  grid-area: form;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  grid-template-areas: "fn ln" "email email" "tel tel" "commentary commentary" "button button";
+}
+.body-index .section-form .section-form-container form .fn {
+  grid-area: fn;
+}
+.body-index .section-form .section-form-container form .ln {
+  grid-area: ln;
+}
+.body-index .section-form .section-form-container form .email {
+  grid-area: email;
+}
+.body-index .section-form .section-form-container form .tel {
+  grid-area: tel;
+}
+.body-index .section-form .section-form-container form .commentary {
+  grid-area: commentary;
+}
+.body-index .section-form .section-form-container form button {
+  grid-area: button;
+  height: 50%;
+}
+.body-index .section-form .section-form-container form input, .body-index .section-form .section-form-container form label, .body-index .section-form .section-form-container form textarea {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
