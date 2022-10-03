@@ -9,6 +9,8 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- link cdn fontawesome -->
+    <script src="https://kit.fontawesome.com/608e3681ee.js" crossorigin="anonymous"></script>
     <!-- link css -->
     <link rel="stylesheet" href="css/style.css">
     <title>Practica</title>
@@ -16,33 +18,28 @@
 
 <body class="body-index">
     <header>
-        <nav>
-            <ul class="ul-left">
-                <li>
-                    <a href="index.html"><b>KLOKKER</b></a>
-                </li>
-                <li>
-                    <a href="#">Tienda</a>
-                </li>
-                <li>
-                    <a href="#">Quiénes somos</a>
-                </li>
-                <li>
-                    <a href="#">FAQ</a>
-                </li>
-                <li>
-                    <a href="#">Contacto</a>
-                </li>
-            </ul>
-            <ul class="ul-right">
-                <li>
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="#">Carrito</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" name="" id="check__menu">
+                <label for="check__menu" id="label__check">
+                    <i class="fa-solid fa-clock icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="#" id="selected">KLOKKER</a></li>
+                        <li><a href="#">Tienda</a>
+                            <ul>
+                                <li><a href="#">RELOJES DE HOMBRE</a></li>
+                                <li><a href="#">RELOJES DE MUJER</a></li>
+                                <li><a href="#">TODOS LOS PRODUCTOS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+            </div>
+        </div>
     </header>
     <main>
         <div>

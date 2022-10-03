@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
   list-style: none;
   text-decoration: none;
 }
@@ -8,24 +13,183 @@ a {
   color: rgba(2, 54, 37, 0.452);
 }
 
+ol, ul {
+  padding-left: 0;
+}
+
 header {
   grid-area: header;
-  background-color: aquamarine;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-header nav {
+header .container__menu {
+  background-color: rgb(36, 36, 36);
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+}
+header .container__menu .menu {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+}
+header .container__menu .menu nav {
+  height: 100%;
+}
+header .container__menu .menu nav > ul {
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+}
+@media screen and (max-width: 750px) {
+  header .container__menu .menu nav > ul {
+    flex-direction: column;
+    background-color: yellowgreen;
+    position: fixed;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    height: 0px;
+    transition: all 300ms ease;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+header .container__menu .menu nav > ul > li {
+  height: 100%;
+  position: relative;
+}
+header .container__menu .menu nav > ul > li > a {
+  width: 100%;
+  height: 100%;
+  display: flex;
   align-items: center;
-  margin: 15px 0;
+  padding: 0 14px;
+  font-size: 14px;
+  transition: all 300ms ease;
+  color: rgb(95, 95, 95);
 }
-header nav a {
-  margin: 0 0.5rem;
+header .container__menu .menu nav > ul > li > a:hover {
+  transform: scale(1.1);
+  color: #fff;
 }
-header nav .ul-left {
+@media screen and (max-width: 750px) {
+  header .container__menu .menu nav > ul > li > a:hover {
+    transform: scale(1);
+  }
+}
+header .container__menu .menu #selected {
+  transform: scale(1.1);
+  color: #fff;
+}
+header .container__menu .menu nav ul li ul {
+  width: 250px;
   display: flex;
+  flex-direction: column;
+  background-color: rgb(36, 36, 36);
+  position: absolute;
+  top: 90px;
+  left: -5px;
+  padding: 14px 0;
+  border-radius: 2px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  transition: all 300ms ease;
 }
-header nav .ul-right {
-  display: flex;
+@media screen and (max-width: 750px) {
+  header .container__menu .menu nav ul li ul {
+    left: 90px;
+  }
+}
+header .container__menu .menu nav ul li:hover ul {
+  visibility: visible;
+  opacity: 1;
+  top: 60px;
+}
+@media screen and (max-width: 750px) {
+  header .container__menu .menu nav ul li:hover ul {
+    top: 27px;
+  }
+}
+header .container__menu .menu nav ul li ul:before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid rgb(36, 36, 36);
+  position: absolute;
+  top: -12px;
+  left: 20px;
+}
+@media screen and (max-width: 750px) {
+  header .container__menu .menu nav ul li ul:before {
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-top: 12px solid rgb(36, 36, 36);
+    top: 11px;
+    left: -12px;
+  }
+}
+header .container__menu .menu nav ul li ul li a {
+  display: block;
+  color: rgb(95, 95, 95);
+  padding: 6px;
+  padding-left: 14px;
+  margin-top: 10px;
+  font-size: 14px;
+  transition: all 300ms ease;
+}
+header .container__menu .menu nav ul li ul li a:hover {
+  background-color: rgb(0, 116, 77);
+  color: #fff;
+  transform: scale(1.1);
+  padding-left: 30px;
+}
+
+@media screen and (max-width: 750px) {
+  nav > ul > li:first-child {
+    left: 2.5rem;
+  }
+}
+.icon__menu {
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  width: 26px;
+  height: 100%;
+  display: none;
+  align-items: center;
+}
+@media screen and (max-width: 750px) {
+  .icon__menu {
+    display: flex;
+  }
+}
+
+#label__check {
+  width: 26px;
+  height: 100%;
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  #label__check {
+    display: block;
+  }
+}
+
+#check__menu {
+  display: none;
+}
+
+#check__menu:checked ~ nav > ul {
+  height: 300px;
+  visibility: visible;
+  opacity: 1;
 }
 
 .body-index {
