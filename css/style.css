@@ -457,4 +457,68 @@ main aside, main section {
   transform: translateY(-2px);
 }
 
+.container {
+  padding: 130px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "add-product add-product image-loaded";
+  justify-content: space-between;
+}
+
+.add-product,
+.list-products,
+.shopping-cart {
+  grid-area: add-product;
+  width: 100%;
+  height: 100%;
+}
+
+.image-loaded {
+  grid-area: image-loaded;
+}
+
+#imageLoader {
+  height: 200px;
+  width: 200px;
+}
+
+.add-product {
+  padding: 30px;
+}
+
+.add-product form div {
+  margin-bottom: 15px;
+}
+
+.add-product label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+
+.add-product input,
+.add-product textarea {
+  width: 100%;
+  border: 1px solid #eee;
+  background: #fff;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 14px;
+  outline: none;
+  letter-spacing: 0.5px;
+}
+
+.add-product button {
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  margin-top: 15px;
+  background: #0A9CE9;
+  color: #fff;
+  padding: 10px 0;
+  cursor: pointer;
+  font-weight: 100;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <!-- link cdn fontawesome -->
+    <script src="https://kit.fontawesome.com/608e3681ee.js" crossorigin="anonymous"></script>
+    <!-- link materializeicons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- link css -->
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>Agregar Producto</title>
+</head>
+
+<body class="body-add-product">
+    <header>
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" name="" id="check__menu">
+                <label for="check__menu" id="label__check">
+                    <i class="fa-solid fa-clock icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="../../../index.html" id="selected">KLOKKER</a></li>
+                        <li><a href="#">Tienda</a>
+                            <ul>
+                                <li><a href="#">RELOJES DE HOMBRE</a></li>
+                                <li><a href="#">RELOJES DE MUJER</a></li>
+                                <li><a href="../all-stock.html">TODOS LOS PRODUCTOS</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Quiénes somos</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a id="selected" href="add-product.html">Contacto</a></li>
+                        <div class="icons">
+                            <div class="li__carrito"><a href="carrito.html"><i
+                                        class="fa-solid fa-cart-shopping icon__carrito"></i></a></div>
+                            <div class="li__login"><a href="#"><i
+                                        class="fa-solid fa-right-to-bracket icon__login"></i></a></div>
+                        </div>
+                    </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <div class="container">
+                <div class="add-product">
+                    <form>
+                        <div>
+                            <label>Nombre del producto:</label>
+                            <input type="text" placeholder="Casio Watch" />
+                        </div>
+                        <div>
+                            <label>Modelo del producto:</label>
+                            <input type="text" placeholder="Casio Watch" />
+                        </div>
+                        <div>
+                            <label>Imagen del producto:</label>
+                            <input id="imageLoader" type="image" src="" alt="">
+                        </div>
+
+                        <div>
+                            <label>Precio del producto:</label>
+                            <input type="number" min="0" placeholder="33.50" />
+                        </div>
+
+                        <button>AGREGAR PRODUCTO</button>
+                    </form>
+                </div>
+                <div class="image-loaded">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum eos, harum repellendus amet
+                    dolorem delectus impedit ratione hic veniam fugiat praesentium, rerum iste nulla commodi, nobis
+                    nesciunt ex laudantium aliquam.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure laudantium consectetur itaque
+                    quibusdam nostrum. Sequi, odio impedit exercitationem vero labore harum laudantium dolorem
+                    necessitatibus eum numquam distinctio laboriosam eaque amet!
+                </div>
+            </div>
+    </main>
+    <script src="../../../js/script.js"></script>
+    <script src="../../../js/admin/add-product.js"></script>
+</body>
+
+</html>

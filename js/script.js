@@ -40,28 +40,35 @@ let totalProductosCargados = productos.length
 // APLICAR IVA
 productos.forEach(element => element.precioConIva())
 
-
-// INNERHTML
+// INNERHTML CARD
 let stock = document.getElementById('stock')
 for(let productosStock of productos){
     let nuevoProducto = document.createElement("article")
     nuevoProducto.innerHTML += `
     <div class="card">
         <figure>
-          <img src="../multimedia/images/stock/${productosStock.id}.png" alt="t-shirt">
+          <img src="../multimedia/images/stock/${productosStock.id}.png" alt="${productosStock.marca} ${productosStock.modelo}">
         </figure>
         <section class="details">
           <div class="min-details">
             <h1>${productosStock.modelo} <span>${productosStock.marca}</span></h1>
             <h1 class="price">$${productosStock.precio.toFixed(2)}</h1>
           </div>
-          <a href="#" class="btn">add to cart</a>
+          <a href="#" id="btnCard" class="btn">add to cart</a>
         </section>
       </div>
     `
     stock.appendChild(nuevoProducto)
 }
 
+let carrito = []
+let btnCard = document.getElementById("btnCard")
+btnCard.addEventListener("click", addToCart)
+function addToCart(){
+  // desarrollar
+  // desarrollar
+  // desarrollar
+}
 
 
 
