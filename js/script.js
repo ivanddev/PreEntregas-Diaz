@@ -1,12 +1,4 @@
-// ZONA STOCK.JS
-// ZONA STOCK.JS
-// ZONA STOCK.JS
-// ZONA STOCK.JS
-// ZONA STOCK.JS
-// ZONA STOCK.JS
-// ZONA STOCK.JS
-// ZONA STOCK.JS
-// ZONA STOCK.JS
+// STOCK.JS
 
 // IVA 10%
 let IVA_GENERAL = 1.10
@@ -27,6 +19,8 @@ class Producto{
 }
 
 // STOCK
+// STOCK
+// STOCK
 const productos = []
 productos.push(new Producto(0, "Apple Watch", "Serie 7 GPS Starlight", 205.20, "unisex"))
 productos.push(new Producto(1, "Apple Watch", "Serie 7 GPS Midnight", 200.20, "unisex"))
@@ -37,6 +31,9 @@ productos.push(new Producto(5, "SmartWatch Samsung Galaxy", "Fit2", 14.395, "uni
 productos.push(new Producto(6, "SmartWatch Xiaomi Watch", "S1 GL Black", 95.395, "unisex"))
 productos.push(new Producto(7, "SmartWatch Xiaomi Watch", "S1 Active", 72.995, "unisex"))
 productos.push(new Producto(8, "SmartWatch Xiaomi Watch", "S1 GL", 95.395, "unisex"))
+// STOCK
+// STOCK
+// STOCK
 
 let totalProductosCargados = productos.length
 
@@ -44,7 +41,7 @@ let totalProductosCargados = productos.length
 productos.forEach(element => element.precioConIva())
 
 
-// ZONA INNERTEXT
+// INNERHTML
 let stock = document.getElementById('stock')
 for(let productosStock of productos){
     let nuevoProducto = document.createElement("article")
@@ -64,7 +61,6 @@ for(let productosStock of productos){
     `
     stock.appendChild(nuevoProducto)
 }
-console.log(productos)
 
 
 
