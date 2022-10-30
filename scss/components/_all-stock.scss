@@ -1,0 +1,103 @@
+// all-stock
+.body-all-stock{
+    main{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-areas: "aside section";
+        height: auto;
+        aside{
+            grid-area: aside;
+            background-color: silver;
+        }
+        section{
+            grid-area: section;
+            background-color: cadetblue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            article{
+                 margin:20px 30px;
+            }
+        }
+    }
+}
+main aside, main section{
+    padding: 130px 0;
+}
+
+// cards
+.card h1 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.card {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    height: 500px;
+    overflow: hidden;
+    width: 400px;
+}
+
+.card > figure {
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.card > figure > img {
+    width: 100%;
+}
+
+.details {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                top .3s ease-in-out;
+}
+
+.card:hover .details {
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+    top: 70%;
+}
+
+.details > .min-details{
+    margin-bottom: 20px;
+}
+
+.details > .min-details {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.details > .min-details > h1 > span {
+    color: #7B7B7B;
+    display: block;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.btn {
+    background-color: #192a56;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                transform .3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  transform: translateY(-2px);
+}

@@ -129,19 +129,25 @@ header{
         left: 2.5rem;
     }
 }
-// icon login
-.icon__login{
-    color: rgb(0, 116, 77);
-}
-.li__login{
+.icons{
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
     @media screen and (max-width: 750px){
-        justify-content: start;
-        padding: 20px;
+        font-size: 20px;
+        justify-content: space-between;
+        padding: 15px 10px 15px 0;
     }
+}
+// icon login
+.icon__login , .icon__carrito{
+    color: rgb(0, 116, 77);
+}
+.li__login , .li__carrito{
+    margin: 0 10px;
+
+
 }
 
 
