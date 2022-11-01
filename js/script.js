@@ -4,18 +4,18 @@
 let IVA_GENERAL = 1.10
 
 // CONSTRUCTOR PRODUCTOS
-class Producto{
-    constructor(id, marca, modelo, precio, genero){
-        this.id = id,
-        this.marca = marca,
-        this.modelo = modelo,
-        this.precio = precio,
-        this.genero = genero
-    }
-    // PRODUCTOS+IVA
-    precioConIva(){
-        this.precio = this.precio * IVA_GENERAL;
-    }
+class Producto {
+  constructor(id, marca, modelo, precio, genero) {
+    this.id = id,
+      this.marca = marca,
+      this.modelo = modelo,
+      this.precio = precio,
+      this.genero = genero
+  }
+  // PRODUCTOS+IVA
+  precioConIva() {
+    this.precio = this.precio * IVA_GENERAL;
+  }
 }
 
 // STOCK
@@ -42,9 +42,9 @@ productos.forEach(element => element.precioConIva())
 
 // INNERHTML CARD
 let stock = document.getElementById('stock')
-for(let productosStock of productos){
-    let nuevoProducto = document.createElement("article")
-    nuevoProducto.innerHTML += `
+for (let productosStock of productos) {
+  let nuevoProducto = document.createElement("article")
+  nuevoProducto.innerHTML += `
     <div class="card">
         <figure>
           <img src="../multimedia/images/stock/${productosStock.id}.png" alt="${productosStock.marca} ${productosStock.modelo}">
@@ -58,18 +58,31 @@ for(let productosStock of productos){
         </section>
       </div>
     `
-    stock.appendChild(nuevoProducto)
+  stock.appendChild(nuevoProducto)
 }
 
 let carrito = []
 let btnCard = document.getElementById("btnCard")
 btnCard.addEventListener("click", addToCart)
-function addToCart(){
+
+function addToCart() {
   // desarrollar
   // desarrollar
   // desarrollar
 }
 
 
+// FILTRADO
+// FILTRADO
+// FILTRADO
+function resetearStockMostrado() {
+  stock.innerHTML = ``
+}
 
+// Filtrar button
+let filtrarBtn = document.getElementById("filtrarBtn")
+filtrarBtn.addEventListener("click", aplicarFiltros)
 
+function aplicarFiltros() {
+
+}

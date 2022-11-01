@@ -35,10 +35,12 @@
                         </li>
                         <li><a href="#">Quiénes somos</a></li>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="../pages/admin/add-product.html">Contacto</a></li>
+                        <li><a href="../pages/admin/add-delete.html">Contacto</a></li>
                         <div class="icons">
-                            <div class="li__carrito"><a href="carrito.html"><i class="fa-solid fa-cart-shopping icon__carrito"></i></a></div>
-                            <div class="li__login"><a href="#"><i class="fa-solid fa-right-to-bracket icon__login"></i></a></div>
+                            <div class="li__carrito"><a href="carrito.html"><i
+                                        class="fa-solid fa-cart-shopping icon__carrito"></i></a></div>
+                            <div class="li__login"><a href="#"><i
+                                        class="fa-solid fa-right-to-bracket icon__login"></i></a></div>
                         </div>
                     </ul>
             </div>
@@ -46,9 +48,19 @@
     </header>
     <main>
         <aside>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores fuga iure placeat ullam
-                necessitatibus culpa nihil. Laborum, eligendi. Molestias, optio ut? Ad placeat commodi tempore vel,
-                nulla adipisci obcaecati animi.</p>
+            <div>
+                <input type="search" name="" id="" placeholder="Buscar producto">
+            </div>
+            <div>
+                <p>Filtrar por:</p>
+            </div>
+            <div>
+                <label>Precio Max. $<b id="rangoSeleccionado">400</b></label><br>
+                <input type="range" id="precioMax" min="0" max="600" value="400" step="1">
+            </div>
+            <div>
+                <button type="submit" id="filtrarBtn">FILTRAR</button>
+            </div>
         </aside>
         <section id="stock">
             <!-- articles/cards -->

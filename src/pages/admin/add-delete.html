@@ -15,7 +15,7 @@
     <title>Agregar Producto</title>
 </head>
 
-<body class="body-add-product">
+<body class="body-add-delete">
     <header>
         <div class="container__menu">
             <div class="menu">
@@ -35,9 +35,9 @@
                         </li>
                         <li><a href="#">Quiénes somos</a></li>
                         <li><a href="#">FAQ</a></li>
-                        <li><a id="selected" href="add-product.html">Contacto</a></li>
+                        <li><a id="selected" href="add-delete.html">Contacto</a></li>
                         <div class="icons">
-                            <div class="li__carrito"><a href="carrito.html"><i
+                            <div class="li__carrito"><a href="../carrito.html"><i
                                         class="fa-solid fa-cart-shopping icon__carrito"></i></a></div>
                             <div class="li__login"><a href="#"><i
                                         class="fa-solid fa-right-to-bracket icon__login"></i></a></div>
@@ -50,14 +50,25 @@
         <div>
             <div class="container">
                 <div class="add-product">
+                    <div class="aclaracion">
+                        <p>ACLARACIÓN: La imagen debe contener el formato <b>.PNG</b> y tener como nombre: <b id="nombrePNG"></b></p>
+                    </div>
                     <form>
                         <div>
                             <label>Nombre del producto:</label>
-                            <input type="text" placeholder="Casio Watch" />
+                            <input type="text" placeholder="Ej: Apple Watch" />
                         </div>
                         <div>
                             <label>Modelo del producto:</label>
-                            <input type="text" placeholder="Casio Watch" />
+                            <input type="text" placeholder="Ej: Serie 7 GPS Midnight" />
+                        </div>
+                        <div>
+                            <label>Género del producto:</label>
+                            <select name="" id="gender">
+                                <option value="unisex">Unisex</option>
+                                <option value="hombre">Hombre</option>
+                                <option value="mujer">Mujer</option>
+                            </select>
                         </div>
                         <div>
                             <label>Imagen del producto:</label>
@@ -66,13 +77,13 @@
 
                         <div>
                             <label>Precio del producto:</label>
-                            <input type="number" min="0" placeholder="33.50" />
+                            <input type="number" min="0" placeholder="Ej: 33.50" />
                         </div>
 
                         <button>AGREGAR PRODUCTO</button>
                     </form>
                 </div>
-                <div class="image-loaded">
+                <div class="delete-product">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum eos, harum repellendus amet
                     dolorem delectus impedit ratione hic veniam fugiat praesentium, rerum iste nulla commodi, nobis
                     nesciunt ex laudantium aliquam.
@@ -83,7 +94,7 @@
             </div>
     </main>
     <script src="../../../js/script.js"></script>
-    <script src="../../../js/admin/add-product.js"></script>
+    <script src="../../../js/admin/add-delete.js"></script>
 </body>
 
 </html>

@@ -458,10 +458,10 @@ main aside, main section {
 }
 
 .container {
-  padding: 130px 0;
+  padding: 70px 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "add-product add-product image-loaded";
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "add-product delete-product";
   justify-content: space-between;
 }
 
@@ -473,8 +473,8 @@ main aside, main section {
   height: 100%;
 }
 
-.image-loaded {
-  grid-area: image-loaded;
+.delete-product {
+  grid-area: delete-product;
 }
 
 #imageLoader {
@@ -484,6 +484,11 @@ main aside, main section {
 
 .add-product {
   padding: 30px;
+}
+.add-product .aclaracion {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
 }
 
 .add-product form div {
