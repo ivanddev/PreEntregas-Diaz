@@ -40,12 +40,12 @@ let totalProductosCargados = productos.length
 // APLICAR IVA
 productos.forEach(element => element.precioConIva())
 
-// INNERHTML CARD
-let stock = document.getElementById('stock')
-for (let productosStock of productos) {
-  let nuevoProducto = document.createElement("article")
-  nuevoProducto.innerHTML += `
-    <div class="card">
+// FUNCION IMPRIMIR CARDS
+function imprimirCards(param1){
+  for (let productosStock of param1) {
+    let nuevoProducto = document.createElement("article")
+    nuevoProducto.innerHTML += `
+    <div class="cardStock">
         <figure>
           <img src="../multimedia/images/stock/${productosStock.id}.png" alt="${productosStock.marca} ${productosStock.modelo}">
         </figure>
@@ -58,9 +58,57 @@ for (let productosStock of productos) {
         </section>
       </div>
     `
-  stock.appendChild(nuevoProducto)
+    stock.appendChild(nuevoProducto)
+  }
 }
 
+// INNERHTML CARD POR DEFECTO - MOSTRAR TODAS LAS CARDS
+let stock = document.getElementById('stock')
+imprimirCards(productos)
+
+// FILTRADO
+// FILTRADO
+// FILTRADO
+function resetearStockMostrado() {
+  stock.innerHTML = ``
+}
+// Marca
+let apple = document.getElementById('apple')
+let xiaomi = document.getElementById('xiaomi')
+let samsung = document.getElementById('samsung')
+apple.addEventListener('click', showApple)
+
+function showApple() {
+  let appleFilter = productos.filter((apple) => apple.marca.toLowerCase().includes('apple'))
+  if (appleFilter.length >= 1) {
+    resetearStockMostrado()
+    imprimirCards(appleFilter)
+  } else {
+    alert('No hay productos disponibles de la marca Apple')
+    return
+  }
+
+}
+
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
+// carrito
 let carrito = []
 let btnCard = document.getElementById("btnCard")
 btnCard.addEventListener("click", addToCart)
@@ -69,20 +117,4 @@ function addToCart() {
   // desarrollar
   // desarrollar
   // desarrollar
-}
-
-
-// FILTRADO
-// FILTRADO
-// FILTRADO
-function resetearStockMostrado() {
-  stock.innerHTML = ``
-}
-
-// Filtrar button
-let filtrarBtn = document.getElementById("filtrarBtn")
-filtrarBtn.addEventListener("click", aplicarFiltros)
-
-function aplicarFiltros() {
-
 }

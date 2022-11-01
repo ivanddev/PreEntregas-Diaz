@@ -384,12 +384,12 @@ main aside, main section {
   padding: 130px 0;
 }
 
-.card h1 {
+.cardStock h1 {
   font-size: 1.2rem;
   text-transform: capitalize;
 }
 
-.card {
+.cardStock {
   position: relative;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -398,12 +398,12 @@ main aside, main section {
   width: 400px;
 }
 
-.card > figure {
+.cardStock > figure {
   width: 90%;
   margin: 20px auto 0 auto;
 }
 
-.card > figure > img {
+.cardStock > figure > img {
   width: 100%;
 }
 
@@ -417,7 +417,7 @@ main aside, main section {
   transition: box-shadow 0.3s ease-in-out, top 0.3s ease-in-out;
 }
 
-.card:hover .details {
+.cardStock:hover .details {
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.3);
   top: 70%;
 }
