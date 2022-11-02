@@ -39,7 +39,8 @@
                         </li>
                         <li><a href="#">Quiénes somos</a></li>
                         <li><a href="#">FAQ</a></li>
-                        <li><a href="../pages/admin/add-delete.html">Contacto</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="../pages/admin/add-delete.html">Agregar/Borrar</a></li>
                         <div class="icons">
                             <div class="li__carrito"><a href="carrito.html"><i
                                         class="fa-solid fa-cart-shopping icon__carrito"></i></a></div>
@@ -53,7 +54,10 @@
     <main>
         <aside>
             <div>
-                <input type="search" name="" id="" placeholder="Buscar producto">
+                <form class="d-flex justify-content-center" role="search">
+                    <input id="inputSearch" class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search" style="width: 85%;">
+                    <button id="lupa" class="btn btn-outline-success d-none" type="submit" style="width: 15%;"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </form>
             </div>
             <div>
                 <p>Filtrar por:</p>
@@ -120,6 +124,7 @@
         </section>
     </main>
     <script src="../../js/script.js"></script>
+    <script src="../../js/stock.js"></script>
     <script src="../../js/filters.js"></script>
     <script src="../../js/carrito.js"></script>
     <!-- link bootstrap -->
