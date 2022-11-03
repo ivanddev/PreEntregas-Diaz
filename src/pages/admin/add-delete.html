@@ -52,20 +52,21 @@
             <div class="container">
                 <div class="add-product">
                     <div class="aclaracion">
-                        <p>ACLARACIÓN: La imagen debe contener el formato <b>.PNG</b> y tener como nombre: <b id="nombrePNG"></b></p>
+                        <p>ACLARACIÓN: La imagen debe contener el formato <b>.PNG</b> y tener como nombre: <b
+                                id="nombrePNG"></b></p>
                     </div>
                     <form>
                         <div>
                             <label>Nombre del producto:</label>
-                            <input type="text" placeholder="Ej: Apple Watch" />
+                            <input id="marcaIngresada" type="text" placeholder="Ej: Apple Watch" />
                         </div>
                         <div>
                             <label>Modelo del producto:</label>
-                            <input type="text" placeholder="Ej: Serie 7 GPS Midnight" />
+                            <input id="modeloIngresado" type="text" placeholder="Ej: Serie 7 GPS Midnight" />
                         </div>
                         <div>
                             <label>Género del producto:</label>
-                            <select name="" id="gender">
+                            <select name="" id="generoIngresado">
                                 <option value="unisex">Unisex</option>
                                 <option value="hombre">Hombre</option>
                                 <option value="mujer">Mujer</option>
@@ -78,10 +79,11 @@
 
                         <div>
                             <label>Precio del producto:</label>
-                            <input type="number" min="0" placeholder="Ej: 33.50" />
+                            <input id="precioIngresado" type="number" min="0" placeholder="Ej: 33.50" />
                         </div>
 
-                        <button>AGREGAR PRODUCTO</button>
+                        <button id="btnAgregarProducto">AGREGAR PRODUCTO</button>
+
                     </form>
                 </div>
                 <div class="delete-product">
