@@ -18,13 +18,15 @@ class Producto {
   }
 }
 
-// STOCK
-// STOCK
-// STOCK
+
 let productos = []
 if (localStorage.getItem('productos')) {
   productos = JSON.parse(localStorage.getItem('productos'))
 } else {
+  // STOCK
+  // STOCK
+  // STOCK
+  // STOCK
   productos.push(new Producto(0, "Apple Watch", "Serie 7 GPS Starlight", 205.20, "unisex"))
   productos.push(new Producto(1, "Apple Watch", "Serie 7 GPS Midnight", 200.20, "unisex"))
   productos.push(new Producto(2, "Apple Watch", "SE Nike GPS", 160.20, "unisex"))
@@ -41,20 +43,6 @@ if (localStorage.getItem('productos')) {
 
   localStorage.setItem('productos', JSON.stringify(productos))
 }
-// productos.push(new Producto(0, "Apple Watch", "Serie 7 GPS Starlight", 205.20, "unisex"))
-// productos.push(new Producto(1, "Apple Watch", "Serie 7 GPS Midnight", 200.20, "unisex"))
-// productos.push(new Producto(2, "Apple Watch", "SE Nike GPS", 160.20, "unisex"))
-// productos.push(new Producto(3, "SmartWatch Samsung Galaxy", "Watch 5", 97.195, "unisex"))
-// productos.push(new Producto(4, "SmartWatch Samsung Galaxy", "Watch 4", 97.195, "unisex"))
-// productos.push(new Producto(5, "SmartWatch Samsung Galaxy", "Fit2", 14.395, "unisex"))
-// productos.push(new Producto(6, "SmartWatch Xiaomi", "S1 GL Black", 95.395, "unisex"))
-// productos.push(new Producto(7, "SmartWatch Xiaomi", "S1 Active", 72.995, "unisex"))
-// productos.push(new Producto(8, "SmartWatch Xiaomi", "S1 GL", 95.395, "unisex"))
-// productos.push(new Producto(9, "Apple Watch", "SE Nike GPS Space Gray", 135,20, "unisex"))
-// productos.push(new Producto(10, "SmartWatch Xiaomi", "Mi Band 6GL", 14300.23 , "unisex"))
-// STOCK
-// STOCK
-// STOCK
 
 let totalProductosCargados = productos.length
 
@@ -84,19 +72,7 @@ function imprimirCards(param1) {
     })
   }
 }
-// FUNCTION AGREGAR AL CARRITO -- listo
-// FUNCTION IMPRIMIR EN EL DOM CARRITO
-
-
-
-
 
 // INNERHTML CARD POR DEFECTO - MOSTRAR TODAS LAS CARDS
 let stock = document.getElementById('stock')
 imprimirCards(productos)
-
-// // STORAGE
-// localStorage.setItem('productos', JSON.stringify(productos))
-// // agarrar el array del localstorage
-// let productos2 = JSON.parse(localStorage.getItem('productos'))
-// console.log(productos2)

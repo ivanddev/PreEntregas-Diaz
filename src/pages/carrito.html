@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,6 +15,7 @@
     <title>Carrito</title>
 
 </head>
+
 <body class="body-carrito">
     <header>
         <div class="container__menu">
@@ -37,32 +39,49 @@
                         <li><a href="#">Contacto</a></li>
                         <li><a href="../pages/admin/add-delete.html">Agregar/Borrar</a></li>
                         <div class="icons">
-                            <div class="li__carrito"><a href="carrito.html"><i id="selected" class="fa-solid fa-cart-shopping icon__carrito"></i></a></div>
-                            <div class="li__login"><a href="#"><i class="fa-solid fa-right-to-bracket icon__login"></i></a></div>
+                            <div class="li__carrito"><a href="carrito.html"><i id="selected"
+                                        class="fa-solid fa-cart-shopping icon__carrito"></i></a></div>
+                            <div class="li__login"><a href="#"><i
+                                        class="fa-solid fa-right-to-bracket icon__login"></i></a></div>
                         </div>
                     </ul>
             </div>
         </div>
     </header>
     <main>
-        <style>table{margin-top: 100px;};</style>
-        <table id="table">
-            <tr>
+        <style>
+            table {
+                margin-top: 100px;
+            }
+
+            ;
+        </style>
+
+        <table>
+            <thead>
+              <tr>
                 <th>Producto</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
-                <th>Status</th>
-            </tr>
-            <tr>
-                <td>peperoni</td>
-                <td>2</td>
-                <td>$40</td>
-                <td><i class="large material-icons">clear</i></td>
-            </tr>
-        </table>
+                <th><button onclick="actualizarCarrito()"><i class="fa-solid fa-arrows-rotate"></i></button></th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td>Footer cont 1</td>
+                <td>Footer cont 2</td>
+                <td>Footer cont 3</td>
+                <td>Footer cont 4</td>
+              </tr>
+            </tfoot>
+            <tbody id="tableBody">
+            </tbody>
+          </table>
+          
     </main>
     <script src="../../js/script.js"></script>
     <script src="../../js/stock.js"></script>
     <script src="../../js/carrito.js"></script>
 </body>
+
 </html>
