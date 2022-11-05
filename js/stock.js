@@ -66,7 +66,6 @@ function imprimirCards(param1) {
     `
     stock.appendChild(nuevoProducto)
     let btnCard = document.getElementById(`btnCard${productosStock.id}`)
-    console.log(btnCard)
     btnCard.addEventListener('click', () => {
       addToCart(productosStock)
     })

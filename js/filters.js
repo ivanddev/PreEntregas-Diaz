@@ -12,16 +12,19 @@ inputSearch.addEventListener('keypress', mostrarLupa)
 function mostrarLupa() {
     lupa.className += 'd-flex'
 }
+
 // Buscador tipeado + include
 inputSearch.addEventListener('input', Tipeo)
 
 function Tipeo() {
     let tipeoFilter = productos.filter((tipeo) => tipeo.marca.toLowerCase().includes(inputSearch.value.toLowerCase()) | tipeo.modelo.toLowerCase().includes(inputSearch.value.toLowerCase()))
-    console.log(inputSearch.value)
-    console.log(tipeoFilter)
-    // desarrollar para poder mostrarlos como texto y no objetos
-    // desarrollar para poder mostrarlos como texto y no objetos
-    // desarrollar para poder mostrarlos como texto y no objetos
+    if (tipeoFilter.length != 0) {
+        resetearStockMostrado()
+        imprimirCards(tipeoFilter)
+    } else {
+        resetearStockMostrado()
+        stock.innerHTML = `No encontramos el producto '${inputSearch.value}' en nuestro catálogo`
+    }
 }
 
 // Marca

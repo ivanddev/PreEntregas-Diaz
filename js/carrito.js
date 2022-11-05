@@ -1,5 +1,7 @@
 // CARRITO.JS
 let carrito = []
+let totalCarrito = 0.00
+let totalCarritoSpan = document.getElementById('totalCarrito')
 let tableBody = document.getElementById('tableBody')
 if (localStorage.getItem('carrito')) {
   carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -16,13 +18,20 @@ function addToCart(productoStock) {
 
 }
 
+
+// Actualizar carrito
 function actualizarCarrito() {
   window.location.reload()
 }
+// Resetear carrito (para un botón a futuro)
+function resetCarrito(){
+  localStorage.removeItem('carrito')
+  window.location.reload()
+}
+
 
 // Imprimir en carrito
 mostrarEnCarrito(carrito)
-
 function mostrarEnCarrito(array) {
   // Mostrar
   array.forEach((productoCarrito) => {
@@ -34,7 +43,12 @@ function mostrarEnCarrito(array) {
     <td><i id="deleteBtn${productoCarrito.id}" class="large material-icons">clear</i></td>
     </tr>
     `
-  })
+    // Sumar en el DOM el producto
+    totalCarrito += productoCarrito.precio
+    totalCarritoSpan.innerText = totalCarrito
+  }
+  
+  )
   // Delete button
   array.forEach((productoCarrito, indice) => {
     document.getElementById(`deleteBtn${productoCarrito.id}`).addEventListener('click',()=>{
@@ -43,14 +57,23 @@ function mostrarEnCarrito(array) {
       // Eliminar del DOM
       let trProducto = document.getElementById(`tr${productoCarrito.id}`)
       trProducto.remove()
+      // Restar del DOM el producto
+      totalCarrito -= productoCarrito.precio
+      totalCarritoSpan.innerText = totalCarrito
+
 
       // Eliminar del Array Carrito
-      carrito.splice(indice, 1)
-      console.log(carrito)
+      array.splice(indice, 1)
+      console.log(array)
 
       // Eliminar del Storage
-      localStorage.setItem('carrito', JSON.stringify(carrito))
+      localStorage.setItem('carrito', JSON.stringify(array))
+
+      window.location.reload()
     })
   })
 }
 console.log(carrito)
+
+
+console.log(totalCarrito)
