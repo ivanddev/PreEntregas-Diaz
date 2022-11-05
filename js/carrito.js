@@ -1,6 +1,10 @@
 // CARRITO.JS
 let carrito = []
 let totalCarrito = 0.00
+let descuentoComprasOnline = 0.10
+let totalDelAhorro = 0
+let totalConDescuento = 0
+let totalConDescuentoSpan = document.getElementById('totalCarritoConDescuento')
 let totalCarritoSpan = document.getElementById('totalCarrito')
 let tableBody = document.getElementById('tableBody')
 if (localStorage.getItem('carrito')) {
@@ -45,7 +49,15 @@ function mostrarEnCarrito(array) {
     `
     // Sumar en el DOM el producto
     totalCarrito += productoCarrito.precio
-    totalCarritoSpan.innerText = totalCarrito
+    totalCarritoSpan.innerText = `$${totalCarrito.toFixed(2)} (-10%)`
+
+
+    totalDelAhorro += productoCarrito.precio
+    totalDelAhorro = totalDelAhorro*descuentoComprasOnline
+    totalConDescuento = totalCarrito - totalDelAhorro
+    totalConDescuentoSpan.innerText = totalConDescuento.toFixed(2)
+
+    console.log(`total con descuento : ${totalConDescuento}`)
   }
   
   )

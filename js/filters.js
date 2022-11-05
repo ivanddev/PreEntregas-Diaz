@@ -17,7 +17,7 @@ function mostrarLupa() {
 inputSearch.addEventListener('input', Tipeo)
 
 function Tipeo() {
-    let tipeoFilter = productos.filter((tipeo) => tipeo.marca.toLowerCase().includes(inputSearch.value.toLowerCase()) | tipeo.modelo.toLowerCase().includes(inputSearch.value.toLowerCase()))
+    let tipeoFilter = productos.filter((element) => element.marca.toLowerCase().includes(inputSearch.value.toLowerCase()) | element.modelo.toLowerCase().includes(inputSearch.value.toLowerCase()))
     if (tipeoFilter.length != 0) {
         resetearStockMostrado()
         imprimirCards(tipeoFilter)

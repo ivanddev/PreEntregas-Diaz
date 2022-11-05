@@ -1,7 +1,7 @@
 // STOCK.JS
 
 // IVA 10%
-let IVA_GENERAL = 1.10
+let IVA_GENERAL = 1.17
 
 // CONSTRUCTOR PRODUCTOS
 class Producto {
@@ -15,6 +15,8 @@ class Producto {
   // PRODUCTOS+IVA
   precioConIva() {
     this.precio = this.precio * IVA_GENERAL;
+    this.precio = Number(this.precio).toFixed(2)
+    this.precio = parseFloat(this.precio)
   }
 }
 
