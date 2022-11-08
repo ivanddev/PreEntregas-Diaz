@@ -5,12 +5,13 @@ let IVA_GENERAL = 1.17
 
 // CONSTRUCTOR PRODUCTOS
 class Producto {
-  constructor(id, marca, modelo, precio, genero) {
+  constructor(id, marca, modelo, precio, genero, url) {
     this.id = id,
       this.marca = marca,
       this.modelo = modelo,
       this.precio = precio,
-      this.genero = genero
+      this.genero = genero,
+      this.url = url
   }
   // PRODUCTOS+IVA
   precioConIva() {
@@ -38,7 +39,7 @@ if (localStorage.getItem('productos')) {
   productos.push(new Producto(6, "SmartWatch Xiaomi", "S1 GL Black", 95.395, "unisex"))
   productos.push(new Producto(7, "SmartWatch Xiaomi", "S1 Active", 72.995, "unisex"))
   productos.push(new Producto(8, "SmartWatch Xiaomi", "S1 GL", 95.395, "unisex"))
-  productos.push(new Producto(9, "Apple Watch", "SE Nike GPS Space Gray", 135, 20, "unisex"))
+  productos.push(new Producto(9, "Apple Watch", "SE Nike GPS Space Gray", 135.20, "unisex"))
   productos.push(new Producto(10, "SmartWatch Xiaomi", "Mi Band 6GL", 14300.23, "unisex"))
   // APLICAR IVA
   productos.forEach(element => element.precioConIva())
@@ -55,7 +56,7 @@ function imprimirCards(param1) {
     nuevoProducto.innerHTML += `
     <div class="cardStock">
         <figure>
-          <img src="../multimedia/images/stock/${productosStock.id}.png" alt="${productosStock.marca} ${productosStock.modelo}">
+          <img src="${productosStock.url !== undefined ? `${productosStock.url}` : `../multimedia/images/stock/${productosStock.id}.png`}" alt="${productosStock.marca} ${productosStock.modelo}">
         </figure>
         <section class="details">
           <div class="min-details">
@@ -77,3 +78,4 @@ function imprimirCards(param1) {
 // INNERHTML CARD POR DEFECTO - MOSTRAR TODAS LAS CARDS
 let stock = document.getElementById('stock')
 imprimirCards(productos)
+console.log(productos)

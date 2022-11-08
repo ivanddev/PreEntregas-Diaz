@@ -1,8 +1,7 @@
 // CARRITO.JS
 let carrito = []
-let totalCarrito = 0.00
+let totalCarrito = 0
 let descuentoComprasOnline = 0.10
-let totalDelAhorro = 0
 let totalConDescuento = 0
 let totalConDescuentoSpan = document.getElementById('totalCarritoConDescuento')
 let totalCarritoSpan = document.getElementById('totalCarrito')
@@ -13,26 +12,24 @@ if (localStorage.getItem('carrito')) {
   console.log('seteando el array carrito por primera vez')
   localStorage.setItem('carrito', JSON.stringify(carrito))
 }
+
 // Agregar al carrito
 function addToCart(productoStock) {
   console.log(productoStock)
   carrito.push(productoStock)
   console.log(carrito)
   localStorage.setItem('carrito', JSON.stringify(carrito))
-
 }
-
 
 // Actualizar carrito
 function actualizarCarrito() {
   window.location.reload()
 }
 // Resetear carrito (para un botón a futuro)
-function resetCarrito(){
+function resetCarrito() {
   localStorage.removeItem('carrito')
   window.location.reload()
 }
-
 
 // Imprimir en carrito
 mostrarEnCarrito(carrito)
@@ -51,19 +48,13 @@ function mostrarEnCarrito(array) {
     totalCarrito += productoCarrito.precio
     totalCarritoSpan.innerText = `$${totalCarrito.toFixed(2)} (-10%)`
 
+    totalConDescuento += productoCarrito.precio
+  })
 
-    totalDelAhorro += productoCarrito.precio
-    totalDelAhorro = totalDelAhorro*descuentoComprasOnline
-    totalConDescuento = totalCarrito - totalDelAhorro
-    totalConDescuentoSpan.innerText = totalConDescuento.toFixed(2)
 
-    console.log(`total con descuento : ${totalConDescuento}`)
-  }
-  
-  )
   // Delete button
   array.forEach((productoCarrito, indice) => {
-    document.getElementById(`deleteBtn${productoCarrito.id}`).addEventListener('click',()=>{
+    document.getElementById(`deleteBtn${productoCarrito.id}`).addEventListener('click', () => {
       console.log(`eliminaste ${productoCarrito.marca} ${productoCarrito.modelo}`)
 
       // Eliminar del DOM
@@ -84,8 +75,8 @@ function mostrarEnCarrito(array) {
       window.location.reload()
     })
   })
+    // Calcular precio final con el descuento compra online
+    totalConDescuento *= descuentoComprasOnline
+    totalConDescuento = totalCarrito - totalConDescuento
+    totalConDescuentoSpan.innerText = totalConDescuento.toFixed(2)
 }
-console.log(carrito)
-
-
-console.log(totalCarrito)
