@@ -71,15 +71,15 @@ function mostrarEnCarrito(array) {
   // ESPACIO PARA SELECT CANTIDAD
   // ESPACIO PARA SELECT CANTIDAD
 
-  array.forEach((productoCarrito, indice) => {
-    let cantidadSeleccionada = document.getElementById(`selectCantidad${productoCarrito.id}`)
-    cantidadSeleccionada.addEventListener('change', calculoCantidad)
-    function calculoCantidad(){
-      precioCambiadoCantidad = productoCarrito.precio * cantidadSeleccionada.value
-      console.log(`precio original :${productoCarrito.precio} de ${productoCarrito.marca} ${productoCarrito.modelo}`) //precio original
-      console.log(`precio depende la cantidad: ${precioCambiadoCantidad} de ${productoCarrito.marca} ${productoCarrito.modelo}`) //precio depende la cantidad
-    }
-  })
+  // array.forEach((productoCarrito) => {
+  //   let cantidadSeleccionada = document.getElementById(`selectCantidad${productoCarrito.id}`)
+  //   cantidadSeleccionada.addEventListener('change', calculoCantidad)
+  //   function calculoCantidad(){
+  //     precioCambiadoCantidad = productoCarrito.precio * cantidadSeleccionada.value
+  //     console.log(`precio original :${productoCarrito.precio} de ${productoCarrito.marca} ${productoCarrito.modelo}`) //precio original
+  //     console.log(`precio depende la cantidad: ${precioCambiadoCantidad} de ${productoCarrito.marca} ${productoCarrito.modelo}`) //precio depende la cantidad
+  //   }
+  // })
   
   // ESPACIO PARA SELECT CANTIDAD
   // ESPACIO PARA SELECT CANTIDAD

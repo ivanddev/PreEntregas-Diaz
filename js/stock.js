@@ -63,7 +63,7 @@ function imprimirCards(param1) {
             <h1>${productosStock.modelo} <span>${productosStock.marca}</span></h1>
             <h1 class="price">$${productosStock.precio}</h1>
           </div>
-          <a href="#" id="btnCard${productosStock.id}" class="btn">add to cart</a>
+          <button href="#" id="btnCard${productosStock.id}" class="btn">add to cart</button>
         </section>
       </div>
     `
