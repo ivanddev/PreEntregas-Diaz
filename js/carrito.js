@@ -60,7 +60,7 @@ function mostrarEnCarrito(array) {
     `
     // Sumar en el DOM el producto
     totalCarrito += productoCarrito.precio
-    totalCarritoSpan.innerText = `$${totalCarrito.toFixed(2)} (-10%)`
+    totalCarritoSpan.innerText = `$${totalCarrito.toFixed(2)}`
 
     totalConDescuento += productoCarrito.precio
   })
