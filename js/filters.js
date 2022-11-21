@@ -5,13 +5,6 @@ function resetearStockMostrado() {
 
 // Input search
 let inputSearch = document.getElementById('inputSearch')
-let lupa = document.getElementById('lupa')
-// Mostrar Lupa
-inputSearch.addEventListener('keypress', mostrarLupa)
-
-function mostrarLupa() {
-    lupa.className += 'd-flex'
-}
 
 // Buscador tipeado + include
 inputSearch.addEventListener('input', Tipeo)

@@ -14,10 +14,19 @@ if (localStorage.getItem('carrito')) {
 }
 
 // Agregar al carrito
-function addToCart(productoStock) {
-  console.log(productoStock)
-  carrito.push(productoStock)
-  console.log(carrito)
+function addToCart(producto) {
+  const existe = carrito.some (prod => prod.id == producto.id)
+  if (existe){
+    const prod = carrito.map(prod => {
+      if(prod.id == producto.id){
+        prod.cantidad++
+      }
+    })
+  }else{
+    console.log(producto)
+    carrito.push(producto)
+    console.log(carrito)
+  }
   localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
@@ -37,55 +46,24 @@ mostrarEnCarrito(carrito)
 function mostrarEnCarrito(array) {
   // Mostrar
   array.forEach((productoCarrito) => {
+    let precioDelProducto
     tableBody.innerHTML += `
     <tr id="tr${productoCarrito.id}">
         <td>${productoCarrito.marca} ${productoCarrito.modelo}</td>
         <td>
-           <select name="" id="selectCantidad${productoCarrito.id}">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-           </select>
+           <p>${productoCarrito.cantidad}</p>
           </td>
-        <td>$${productoCarrito.precio}</td>
+        <td>$${precioDelProducto = productoCarrito.precio*productoCarrito.cantidad}</span></td>
         <td><i id="deleteBtn${productoCarrito.id}" class="large material-icons">clear</i></td>
     </tr>
     `
+
     // Sumar en el DOM el producto
-    totalCarrito += productoCarrito.precio
+    totalCarrito += precioDelProducto
     totalCarritoSpan.innerText = `$${totalCarrito.toFixed(2)}`
 
-    totalConDescuento += productoCarrito.precio
+    totalConDescuento += precioDelProducto
   })
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
-
-  // array.forEach((productoCarrito) => {
-  //   let cantidadSeleccionada = document.getElementById(`selectCantidad${productoCarrito.id}`)
-  //   cantidadSeleccionada.addEventListener('change', calculoCantidad)
-  //   function calculoCantidad(){
-  //     precioCambiadoCantidad = productoCarrito.precio * cantidadSeleccionada.value
-  //     console.log(`precio original :${productoCarrito.precio} de ${productoCarrito.marca} ${productoCarrito.modelo}`) //precio original
-  //     console.log(`precio depende la cantidad: ${precioCambiadoCantidad} de ${productoCarrito.marca} ${productoCarrito.modelo}`) //precio depende la cantidad
-  //   }
-  // })
-  
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
-  // ESPACIO PARA SELECT CANTIDAD
 
 
   // Delete button
