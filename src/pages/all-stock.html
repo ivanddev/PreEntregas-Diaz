@@ -51,64 +51,91 @@
             </div>
         </div>
     </header>
-    <main>
+    <main id="allStockMain">
         <aside>
             <div>
-                <form class="d-flex justify-content-center" role="search">
-                    <input id="inputSearch" class="form-control me-2" type="search" placeholder="¿Qué estás buscando?" aria-label="Search" style="width: 85%;">
-                  </form>
+                <form role="search">
+                    <div id="divInput">
+                        <input id="inputSearch" class="form-control me-2" type="search" placeholder="¿Qué estás buscando?"
+                        aria-label="Search">
+                    </div>
+                    <div class="divFiltersBtn">
+                        <i id="filtersBtn" class="material-icons">tune</i>
+                    </div>
+                </form>
             </div>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Marca
-                        </button>
-                    </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><p id="apple">Apple Watch</p></li>
-                                <li class="list-group-item"><p id="xiaomi">SmartWatch Xiaomi Watch</p></li>
-                                <li class="list-group-item"><p id="samsung">SmartWatch Samsung Galaxy</p></li>
-                            </ul>
+            <div id="filters">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                Marca
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <p id="apple">Apple Watch</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p id="xiaomi">SmartWatch Xiaomi Watch</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p id="samsung">SmartWatch Samsung Galaxy</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Género
-                        </button>
-                    </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><p id="hombre">Hombre</p></li>
-                                <li class="list-group-item"><p id="mujer">Mujer</p></li>
-                                <li class="list-group-item"><p id="unisex">Unisex</p></li>
-                            </ul>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                Género
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <p id="hombre">Hombre</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p id="mujer">Mujer</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p id="unisex">Unisex</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingOne">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Precio
-                        </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-                        data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><p id="menorAmayor">Menor a mayor</p></li>
-                                <li class="list-group-item"><p id="mayorAmenor">Mayor a menor</p></li>
-                            </ul>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                Precio
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        <p id="menorAmayor">Menor a mayor</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p id="mayorAmenor">Mayor a menor</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

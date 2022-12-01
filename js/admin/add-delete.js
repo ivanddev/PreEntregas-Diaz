@@ -53,7 +53,7 @@ function confirmacion() {
 }
 
 function nuevoProducto(array) {
-    let productoCreado = new Producto(productos.length, marcaIngresada.value, modeloIngresado.value, parseInt(precioIngresado.value), generoIngresado.value, urlIngresado.value)
+    let productoCreado = new Producto(productos.length, marcaIngresada.value, modeloIngresado.value, parseInt(precioIngresado.value), generoIngresado.value, 1, urlIngresado.value)
     array.push(productoCreado)
     localStorage.setItem('productos', JSON.stringify(array))
     console.log(array)

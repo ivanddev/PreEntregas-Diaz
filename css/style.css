@@ -360,17 +360,47 @@ header .container__menu .menu nav ul li ul li a:hover {
 
 .body-all-stock main {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 3% 95%;
   grid-template-areas: "aside section";
   height: auto;
+  transition: all 0.4s ease-out;
 }
 .body-all-stock main aside {
+  height: 100%;
+  padding: 100px 40px;
   grid-area: aside;
   background-color: rgb(36, 36, 36);
 }
 .body-all-stock main aside input, .body-all-stock main aside div, .body-all-stock main aside li, .body-all-stock main aside .accordion-flush .accordion-item .accordion-button, .body-all-stock main aside .accordion-flush .accordion-item .accordion-button.collapsed {
   background-color: transparent;
   color: #fff;
+}
+.body-all-stock main aside form {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 80% 20%;
+  grid-template-areas: "input btn";
+}
+.body-all-stock main aside form #divInput {
+  grid-area: input;
+}
+.body-all-stock main aside form .divFiltersBtn {
+  grid-area: btn;
+  display: flex;
+  justify-content: end;
+}
+.body-all-stock main aside form .divFiltersBtn i {
+  color: #fff;
+  font-size: 2.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.body-all-stock main aside form .divFiltersBtn i:hover {
+  color: rgb(0, 116, 77);
+  transition: all 0.5s ease;
+}
+.body-all-stock main aside #divInput, .body-all-stock main aside #filters {
+  display: none;
 }
 .body-all-stock main section {
   grid-area: section;
@@ -401,6 +431,16 @@ main aside, main section {
   height: 500px;
   overflow: hidden;
   width: 400px;
+  background-color: #fff;
+}
+
+.cardStock > .details {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .cardStock > figure {
@@ -413,7 +453,6 @@ main aside, main section {
 }
 
 .details {
-  background-color: #FFF;
   border-radius: 10px;
   padding: 20px;
   position: absolute;

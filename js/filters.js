@@ -1,4 +1,27 @@
 // FILTERS.JS
+let filtersBtn = document.getElementById('filtersBtn')
+filtersBtn.addEventListener('click', mostrarFilters)
+filtersBtn.addEventListener('mousemove', mostrarFilters)
+function mostrarFilters(){
+    let allStockMain = document.getElementById('allStockMain')
+    let input = document.getElementById('divInput')
+    let filters = document.getElementById('filters')
+    const curGridTemplateStyle = allStockMain.style.gridTemplateColumns;
+    if (curGridTemplateStyle === '3% 95%'){
+        allStockMain.style.gridTemplateColumns = '20% 80%';
+        input.style.display = 'block'
+        filters.style.display = 'block'
+	}
+	else{
+        allStockMain.style.gridTemplateColumns = '3% 95%'; //me he kedao akí aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        input.style.display = 'none'
+        filters.style.display = 'none'
+    }			
+
+}
+
+
+
 function resetearStockMostrado() {
     stock.innerHTML = ``
 }
